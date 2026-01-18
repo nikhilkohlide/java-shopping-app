@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Online Shopping Portal</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            margin: 0;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .card h3 {
+            margin: 0;
+        }
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Online Shopping Portal</h1>
+    <p>Welcome to Java Shopping Website</p>
+</header>
+
+<div class="container">
+    <div class="card" th:each="p : ${products}">
+        <h3 th:text="${p.name}"></h3>
+        <p th:text="${p.description}"></p>
+        <p class="price">₹ <span th:text="${p.price}"></span></p>
+        <p th:text="${p.availability}"></p>
+        <button>View Details</button>
+        <br><br>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+<footer>
+    <p>Deployed via Jenkins CI/CD Pipeline on Kubernetes 🚀</p>
+</footer>
+
+</body>
+</html>
+
