@@ -7,7 +7,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'git@github.com:nikhilmustur/java-shopping-app.git',
-                    credentialsId: 'git_hub-ssh'
+                    credentialsId: 'git_hub-SSh'
             }
         }
 
