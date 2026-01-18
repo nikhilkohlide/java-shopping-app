@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/nikhilkohlide/java-shopping-app'
+                git branch: 'main', url: 'git@github.com:nikhilmustur/java-shopping-app.git'
             }
         }
 
