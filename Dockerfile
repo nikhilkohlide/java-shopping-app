@@ -1,5 +1,5 @@
 # Use Maven + JDK image to build inside container
-FROM maven:3.9.2-eclipse-temurin-17 AS build
+FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
