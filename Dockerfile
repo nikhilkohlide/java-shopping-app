@@ -3,6 +3,8 @@ FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
+
+
 # Copy pom and source
 COPY pom.xml .
 COPY src ./src
